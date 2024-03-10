@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Upload</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form id="uploadForm" action="uploadingmusic.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="musicFile" id="musicFile" accept=".mp3">
+    <button type="submit">Upload Music</button>
+</form>
+
+<div id="uploadStatus"></div>
+
+</body>
+</html>
+<!-- index.html contains a form with a file input field where artists can select their music file to upload.
+upload.php is the server-side script that handles the file upload. It checks if a file was uploaded, validates its type (MP3 in this case), checks if it already exists, and then moves it to a specified directory if all checks pass.
+styles.css is where you can add your CSS styles to customize the appearance of the upload form.
+Make sure to create a directory named uploads in the same directory as your PHP files to store the uploaded music files. Additionally, ensure that the web server has write permissions to this directory. -->
